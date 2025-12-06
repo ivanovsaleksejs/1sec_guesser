@@ -228,7 +228,7 @@ if [[ "$KEEP" != "y" ]]; then
     rm -rf "$OUTPUT_FILE" "$NAMES_FILE"
 fi
 
-if (( guessed > total_lines / 2 )); then
+if (( guessed >= total_lines / 2 )); then
     echo -ne "Guessed: ${GREEN}${guessed}${RESET} / ${GREEN}${total_lines}${RESET}."
 else
     echo -ne "Guessed: ${RED}${guessed}${RESET} / ${RED}${total_lines}${RESET}."
